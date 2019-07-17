@@ -3,12 +3,20 @@ import os
 import re
 import pymmd
 import warnings
+import sys
 
 INPUT_ROOT = "input"
 OUTPUT_ROOT = "output"
 
+if (len(sys.argv) == 2):
+    OUTPUT_ROOT = sys.argv[1]
+
+if (len(sys.argv) >= 3):
+    INPUT_ROOT = sys.argv[1]
+    OUTPUT_ROOT = sys.argv[2]
+
 # copy static files to output directory
-copy_tree("input/static", "output/static")
+copy_tree(f'{INPUT_ROOT}/static', f'{OUTPUT_ROOT}/static')
 
 # get all files in input directory
 files = os.listdir(INPUT_ROOT)
