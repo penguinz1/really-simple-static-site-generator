@@ -6,7 +6,7 @@ import warnings
 import sys
 
 INPUT_ROOT = "input"
-OUTPUT_ROOT = "output"
+OUTPUT_ROOT = "penguinz1.github.io"
 
 if (len(sys.argv) == 2):
     OUTPUT_ROOT = sys.argv[1]
